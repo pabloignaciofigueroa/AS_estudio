@@ -471,7 +471,7 @@ body { cursor: none; }
 }
 .hero__line { display: block; }
 .hero__line--em {
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--white);
   position: relative;
 }
 .hero__line--lock,
