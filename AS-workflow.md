@@ -97,6 +97,8 @@ Regla:
 - No convertir la web en una landing agresiva.
 - No usar demasiados efectos.
 - No perder aire, orden y limpieza.
+- En estados `hover` o activos, el texto debe seguir centrado y legible; la animacion acompana, no reemplaza el contenido.
+- Las animaciones de scroll deben activarse desde un `ancla visual` clara para el usuario, no demasiado pronto ni antes de que el contenido clave entre en escena.
 - Siempre priorizar percepcion de calidad sobre cantidad de informacion.
 
 ## 12. Resultado esperado
@@ -106,3 +108,16 @@ Regla:
 - Que despierte interes.
 - Que invite a escribir por Instagram.
 - Que deje claro que hay mas trabajo detras de lo visible.
+
+## 13. Workflow de iteracion
+
+- Trabajamos en ciclos cortos de `entrega / arreglo / mejora`.
+- Primero cerramos una version visible y funcional.
+- Despues corregimos lo que rompe experiencia, jerarquia o percepcion.
+- Luego refinamos copy, quiebres de linea, enfasis tipografico y detalle visual.
+- Cada ajuste aprobado se suma al workflow para que la siguiente iteracion sea mas precisa.
+- Si una seccion no convence, podemos `reemplazar el concepto completo` sin cambiar su rol dentro de la narrativa de la pagina.
+- Las secciones-pausa deben sentirse editoriales y atmosfericas: menos texto, mejor ritmo, fondo claro u oscuro segun contraste necesario, y un gesto visual protagonista bien definido.
+- Si una accion secundaria ya funciona, podemos llevarla al gesto principal para que la experiencia se sienta mas natural, mas directa y con menos friccion.
+- Cuando un elemento selecciona una ruta hacia otra seccion, su estado activo debe quedar visible despues del click para reforzar continuidad entre origen y destino.
+- Si una seccion funciona estructuralmente pero se siente estatica, primero probamos darle `atmósfera visual` con imagen de fondo, profundidad y velos antes de rehacer toda la composicion.

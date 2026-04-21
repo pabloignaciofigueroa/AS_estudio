@@ -23,7 +23,7 @@
       requestAnimationFrame(raf);
     };
     raf();
-    const hoverables = "a, button, [data-hover], .proj__thumb, .proof__slide, .service";
+    const hoverables = "a, button, [data-hover], .proj__hero, .proj__thumb, .proof__slide, .service, .services-showcase__pill, .services-showcase__tile";
     document.addEventListener("mouseover", (e) => { if (e.target.closest(hoverables)) cursor.classList.add("is-hover"); });
     document.addEventListener("mouseout",  (e) => { if (e.target.closest(hoverables)) cursor.classList.remove("is-hover"); });
     document.addEventListener("mousedown", () => cursor.classList.add("is-down"));
@@ -198,19 +198,23 @@
 
   /* ---------- 6. HORIZONTAL PROOF SCROLL ---------- */
   if (hasGSAP && !prefersReduced) {
+    const proof = $(".proof");
     const track = $(".proof__track");
     const viewport = $(".proof__viewport");
-    if (track && viewport) {
+    const progress = $(".proof__progress");
+    if (proof && track && viewport && progress) {
+      const proofStartOffset = 32;
       const distance = () => track.scrollWidth - viewport.clientWidth;
       gsap.to(track, {
         x: () => -distance(),
         ease: "none",
         scrollTrigger: {
-          trigger: ".proof",
-          start: "top top+=80",
+          trigger: progress,
+          start: () => `top bottom-=${proofStartOffset}`,
           end: () => "+=" + distance(),
           scrub: 0.8,
-          pin: ".proof",
+          pin: proof,
+          anticipatePin: 1,
           invalidateOnRefresh: true,
           onUpdate: (self) => {
             const fill = $("[data-proof-fill]");
@@ -233,28 +237,71 @@
     const mainImg = $("[data-proj-main]", proj);
     const idxOut = $("[data-proj-idx]", proj);
     const thumbs = $$(".proj__thumb", proj);
+    if (!hero || !mainImg || !thumbs.length) return;
+
+    const setActiveThumb = (nextIndex) => {
+      if (hero.classList.contains("is-morphing")) return;
+      const safeIndex = ((nextIndex % thumbs.length) + thumbs.length) % thumbs.length;
+      const btn = thumbs[safeIndex];
+      const full = btn.dataset.full;
+      const alt = btn.dataset.alt || btn.querySelector("img")?.alt || mainImg.alt || "";
+
+      thumbs.forEach((thumb) => {
+        thumb.classList.remove("is-active");
+        thumb.setAttribute("aria-selected", "false");
+      });
+
+      btn.classList.add("is-active");
+      btn.setAttribute("aria-selected", "true");
+
+      hero.classList.add("is-morphing");
+      const preload = new Image();
+      preload.onload = () => {
+        mainImg.src = full;
+        mainImg.alt = alt;
+        requestAnimationFrame(() => hero.classList.remove("is-morphing"));
+      };
+      preload.src = full;
+
+      if (idxOut) {
+        idxOut.textContent = `${String(safeIndex + 1).padStart(2, "0")} / ${String(thumbs.length).padStart(2, "0")}`;
+      }
+    };
+
     thumbs.forEach((btn, i) => {
       btn.addEventListener("click", () => {
         if (btn.classList.contains("is-active")) return;
-        thumbs.forEach(b => { b.classList.remove("is-active"); b.setAttribute("aria-selected", "false"); });
-        btn.classList.add("is-active");
-        btn.setAttribute("aria-selected", "true");
-        const full = btn.dataset.full;
-        const alt = btn.dataset.alt || btn.querySelector("img")?.alt || mainImg.alt || "";
-        hero.classList.add("is-morphing");
-        const preload = new Image();
-        preload.onload = () => {
-          mainImg.src = full;
-          mainImg.alt = alt;
-          requestAnimationFrame(() => hero.classList.remove("is-morphing"));
-        };
-        preload.src = full;
-        if (idxOut) idxOut.textContent = `${String(i + 1).padStart(2, "0")} / ${String(thumbs.length).padStart(2, "0")}`;
+        setActiveThumb(i);
       });
+    });
+
+    const goToNextImage = () => {
+      const currentIndex = thumbs.findIndex((thumb) => thumb.classList.contains("is-active"));
+      setActiveThumb((currentIndex === -1 ? 0 : currentIndex + 1));
+    };
+
+    hero.addEventListener("click", goToNextImage);
+    hero.addEventListener("keydown", (e) => {
+      if (e.key !== "Enter" && e.key !== " ") return;
+      e.preventDefault();
+      goToNextImage();
     });
   });
 
-  /* ---------- 8. COUNTERS ---------- */
+  /* ---------- 8. SERVICES TO CONTACT ---------- */
+  const servicePills = $$(".services-showcase__pill[data-service]");
+  servicePills.forEach((pill) => {
+    pill.addEventListener("click", () => {
+      servicePills.forEach((item) => {
+        item.classList.remove("is-selected");
+        item.removeAttribute("aria-current");
+      });
+      pill.classList.add("is-selected");
+      pill.setAttribute("aria-current", "true");
+    });
+  });
+
+  /* ---------- 9. COUNTERS ---------- */
   $$("[data-counter]").forEach((el) => {
     const out = $("[data-counter-out]", el);
     const to = parseFloat(el.dataset.to || "0");
@@ -279,7 +326,7 @@
     }
   });
 
-  /* ---------- 9. SMOOTH ANCHOR LINKS ---------- */
+  /* ---------- 10. SMOOTH ANCHOR LINKS ---------- */
   $$('a[href^="#"]').forEach((a) => {
     a.addEventListener("click", (e) => {
       const id = a.getAttribute("href");
@@ -292,7 +339,7 @@
     });
   });
 
-  /* ---------- 10. REFRESH ST ON LOAD ---------- */
+  /* ---------- 11. REFRESH ST ON LOAD ---------- */
   window.addEventListener("load", () => {
     if (window.ScrollTrigger) ScrollTrigger.refresh();
   });
