@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AS · estudio de arquitectura · Chiloé</title>
+  <meta name="description" content="Estudio de arquitectura en el archipiélago de Chiloé. Residencias que parten del paisaje, la materia y la luz del sur austral.">
+
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="indexv11.css">
+</head>
+<body>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" data-header>
+    <div class="shell site-header__inner">
+      <a class="brand" href="#top" aria-label="AS estudio arquitectura Chiloé">
+        <span class="brand__ring"></span>
+        <img class="brand__logo" src="../logotipo.png" alt="">
+        <span class="brand__mark">
+          <span class="brand__primary">AS</span>
+          <span class="brand__sep">//</span>
+          <span class="brand__sub">estudio</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Principal">
+        <a href="#obras" data-nav><span data-hover="Obras">Obras</span></a>
+        <a href="#filosofia" data-nav><span data-hover="Estudio">Estudio</span></a>
+        <a href="#servicios" data-nav><span data-hover="Servicios">Servicios</span></a>
+        <a href="#contacto" data-nav><span data-hover="Contacto">Contacto</span></a>
+      </nav>
+
+      <a class="btn btn--ghost btn--sm" href="#contacto">
+        <span>Agendar conversación</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11L11 3M11 3H5.5M11 3V8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ========== HERO ========== -->
+    <section class="hero" data-hero>
+      <div class="hero__media">
+        <img src="../imagenes/casa%20Leonard/exteriores/01.png" alt="Casa Leonard en Chiloé al atardecer" data-hero-img>
+        <div class="hero__veil"></div>
+        <div class="hero__veil hero__veil--top"></div>
+      </div>
+
+      <canvas class="hero__particles" aria-hidden="true"></canvas>
+
+      <div class="shell hero__content">
+        <div class="hero__meta" data-reveal>
+          <span class="tag tag--dot">
+            <span class="tag__dot"></span>
+            Estudio en Chiloé
+          </span>
+          <span class="tag tag--mono">43°S · 74°W · Archipiélago</span>
+        </div>
+
+        <h1 class="hero__title">
+          <span class="hero__line" data-split>Arquitectura que parte</span>
+          <span class="hero__line hero__line--em" data-split>del <em class="typed" data-typed="paisaje,tiempo,lugar,clima">paisaje</em><span class="typed__cursor" aria-hidden="true"></span>.</span>
+        </h1>
+
+        <p class="hero__lead" data-reveal data-reveal-delay="0.15">
+          Residencias pensadas desde la materia, la geografía y la luz del sur austral.
+          Un estudio pequeño, con criterio largo.
+        </p>
+
+        <div class="hero__actions" data-reveal data-reveal-delay="0.25">
+          <a class="btn btn--primary" href="#obras">
+            <span>Ver obras seleccionadas</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11L11 3M11 3H5.5M11 3V8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </a>
+          <a class="btn btn--ghost-dark" href="#contacto">
+            <span>Iniciar proyecto</span>
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero__chip" data-reveal data-reveal-delay="0.4">
+        <div class="hero__chip-inner">
+          <span class="hero__chip-pulse" aria-hidden="true"></span>
+          <div>
+            <p class="hero__chip-label">Proyecto en curso · 2026</p>
+            <p class="hero__chip-value">Casa Leonard · Quemchi</p>
+          </div>
+        </div>
+      </aside>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span>scroll</span>
+        <span class="hero__scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- ========== STRIP / MARQUEE (seamless) ========== -->
+    <section class="strip" aria-hidden="true">
+      <div class="strip__track">
+        <div class="strip__row">
+          <span>Vivienda unifamiliar</span><span class="strip__bullet">●</span>
+          <span>Remodelación</span><span class="strip__bullet">●</span>
+          <span>Interiorismo</span><span class="strip__bullet">●</span>
+          <span>Anteproyecto</span><span class="strip__bullet">●</span>
+          <span>Dirección de obra</span><span class="strip__bullet">●</span>
+          <span>Paisaje</span><span class="strip__bullet">●</span>
+        </div>
+        <div class="strip__row" aria-hidden="true">
+          <span>Vivienda unifamiliar</span><span class="strip__bullet">●</span>
+          <span>Remodelación</span><span class="strip__bullet">●</span>
+          <span>Interiorismo</span><span class="strip__bullet">●</span>
+          <span>Anteproyecto</span><span class="strip__bullet">●</span>
+          <span>Dirección de obra</span><span class="strip__bullet">●</span>
+          <span>Paisaje</span><span class="strip__bullet">●</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== VISUAL PROOF — horizontal ========== -->
+    <section class="proof" data-proof>
+      <div class="shell proof__head">
+        <div>
+          <p class="eyebrow"><span class="eyebrow__idx">01</span> Obra</p>
+          <h2 data-reveal>Seis fragmentos.<br>Dos casas. Un criterio.</h2>
+        </div>
+        <p class="proof__support" data-reveal data-reveal-delay="0.1">
+          Una galería horizontal para leer el lenguaje del estudio antes que los planos.
+        </p>
+      </div>
+
+      <div class="proof__viewport">
+        <div class="proof__track">
+          <figure class="proof__slide"><img src="../imagenes/casa%20Leonard/exteriores/01.png" alt=""><figcaption>Casa Leonard · exterior 01</figcaption></figure>
+          <figure class="proof__slide"><img src="../imagenes/casa%20Leonard/exteriores/03.png" alt=""><figcaption>Casa Leonard · exterior 02</figcaption></figure>
+          <figure class="proof__slide"><img src="../imagenes/casa%20Leonard/interiores/01.png" alt=""><figcaption>Casa Leonard · interior 03</figcaption></figure>
+          <figure class="proof__slide"><img src="../imagenes/casa%20bah%C3%ADa%20pillul/exteriores/02.png" alt=""><figcaption>Bahía Pillul · exterior 01</figcaption></figure>
+          <figure class="proof__slide"><img src="../imagenes/casa%20bah%C3%ADa%20pillul/exteriores/03.png" alt=""><figcaption>Bahía Pillul · exterior 02</figcaption></figure>
+          <figure class="proof__slide"><img src="../imagenes/casa%20bah%C3%ADa%20pillul/interiores/01.png" alt=""><figcaption>Bahía Pillul · interior 03</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="shell proof__progress">
+        <div class="proof__progress-track"><div class="proof__progress-fill" data-proof-fill></div></div>
+        <span class="proof__progress-label mono" data-proof-count>01 / 06</span>
+      </div>
+    </section>
+
+    <!-- ========== PHILOSOPHY ========== -->
+    <section class="philosophy" id="filosofia">
+      <div class="shell philosophy__grid">
+        <div class="philosophy__head">
+          <p class="eyebrow"><span class="eyebrow__idx">02</span> Estudio</p>
+          <h2 data-reveal>
+            No dibujamos casas.<br>
+            Dibujamos <em>modos de habitar</em> el sur.
+          </h2>
+        </div>
+
+        <div class="philosophy__body">
+          <p class="philosophy__lead" data-reveal data-reveal-delay="0.1">
+            Cada proyecto empieza escuchando el sitio: la luz que cae en invierno,
+            el viento dominante, la madera disponible, el oficio local.
+            La forma llega después, ya informada.
+          </p>
+
+          <div class="principles">
+            <article class="principles__item" data-reveal>
+              <span class="principles__num mono">01</span>
+              <h3>Paisaje antes que forma</h3>
+              <p>Implantación precisa. Respuesta al relieve, al borde costero y a la mirada larga.</p>
+            </article>
+            <article class="principles__item" data-reveal data-reveal-delay="0.08">
+              <span class="principles__num mono">02</span>
+              <h3>Materia chilota</h3>
+              <p>Madera nativa, tejuela, acero contenido, hormigón cuando corresponde.</p>
+            </article>
+            <article class="principles__item" data-reveal data-reveal-delay="0.16">
+              <span class="principles__num mono">03</span>
+              <h3>Luz y silencio</h3>
+              <p>Proporciones exactas, ventanas pensadas, atmósfera antes que ornamento.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section class="projects" id="obras">
+      <div class="shell projects__head">
+        <p class="eyebrow"><span class="eyebrow__idx">03</span> Obras seleccionadas</p>
+        <h2 data-reveal>Dos obras para entender<br>el estudio.</h2>
+      </div>
+
+      <div class="shell">
+        <!-- Project 01 -->
+        <article class="proj" data-proj data-proj-index="01">
+          <header class="proj__top">
+            <div class="proj__id">
+              <span class="proj__kicker mono">PROY · 01</span>
+              <h3>Casa Bahía Pillul</h3>
+            </div>
+            <div class="proj__location mono">
+              <span>Chiloé · Chile</span>
+              <span>245 m² · 2024</span>
+            </div>
+          </header>
+
+          <div class="proj__layout">
+            <div class="proj__stage">
+              <figure class="proj__hero">
+                <img data-proj-main src="../imagenes/casa%20bah%C3%ADa%20pillul/exteriores/03.png" alt="Casa Bahía Pillul">
+                <div class="proj__hero-overlay"></div>
+                <span class="proj__hero-idx mono" data-proj-idx>01 / 06</span>
+              </figure>
+
+              <div class="proj__thumbs" role="tablist">
+                <button class="proj__thumb is-active" role="tab" aria-selected="true" data-full="../imagenes/casa%20bah%C3%ADa%20pillul/exteriores/03.png">
+                  <img src="../imagenes/casa%20bah%C3%ADa%20pillul/exteriores/03.png" alt=""></button>
+                <button class="proj__thumb" role="tab" data-full="../imagenes/casa%20bah%C3%ADa%20pillul/exteriores/04.png">
+                  <img src="../imagenes/casa%20bah%C3%ADa%20pillul/exteriores/04.png" alt=""></button>
+                <button class="proj__thumb" role="tab" data-full="../imagenes/casa%20bah%C3%ADa%20pillul/exteriores/07.png">
+                  <img src="../imagenes/casa%20bah%C3%ADa%20pillul/exteriores/07.png" alt=""></button>
+                <button class="proj__thumb" role="tab" data-full="../imagenes/casa%20bah%C3%ADa%20pillul/interiores/01.png">
+                  <img src="../imagenes/casa%20bah%C3%ADa%20pillul/interiores/01.png" alt=""></button>
+                <button class="proj__thumb" role="tab" data-full="../imagenes/casa%20bah%C3%ADa%20pillul/interiores/02.png">
+                  <img src="../imagenes/casa%20bah%C3%ADa%20pillul/interiores/02.png" alt=""></button>
+                <button class="proj__thumb" role="tab" data-full="../imagenes/casa%20bah%C3%ADa%20pillul/interiores/04.png">
+                  <img src="../imagenes/casa%20bah%C3%ADa%20pillul/interiores/04.png" alt=""></button>
+              </div>
+            </div>
+
+            <aside class="proj__side">
+              <dl class="proj__meta">
+                <div><dt>Ubicación</dt><dd>Chiloé, Chile</dd></div>
+                <div><dt>Tipología</dt><dd>Vivienda unifamiliar</dd></div>
+                <div><dt>Estado</dt><dd>Residencial</dd></div>
+                <div><dt>Superficie</dt><dd>245 m²</dd></div>
+                <div><dt>Año</dt><dd>2024</dd></div>
+              </dl>
+
+              <div class="proj__text">
+                <p>
+                  Abre sus recintos principales hacia el borde costero y trabaja una
+                  implantación precisa sobre el paisaje.
+                </p>
+                <p>
+                  La propuesta equilibra presencia arquitectónica, calidez interior y
+                  una experiencia de habitar luminosa y flexible.
+                </p>
+              </div>
+
+              <a class="btn btn--outline" href="https://www.instagram.com/as_estudioarquitecturachiloe" target="_blank" rel="noreferrer">
+                <span>Ver proyecto en Instagram</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11L11 3M11 3H5.5M11 3V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </a>
+            </aside>
+          </div>
+        </article>
+
+        <!-- Project 02 -->
+        <article class="proj proj--alt" data-proj data-proj-index="02">
+          <header class="proj__top">
+            <div class="proj__id">
+              <span class="proj__kicker mono">PROY · 02</span>
+              <h3>Casa Leonard</h3>
+            </div>
+            <div class="proj__location mono">
+              <span>Chiloé · Chile</span>
+              <span>210 m² · 2023</span>
+            </div>
+          </header>
+
+          <div class="proj__layout">
+            <div class="proj__stage">
+              <figure class="proj__hero">
+                <img data-proj-main src="../imagenes/casa%20Leonard/exteriores/01.png" alt="Casa Leonard">
+                <div class="proj__hero-overlay"></div>
+                <span class="proj__hero-idx mono" data-proj-idx>01 / 06</span>
+              </figure>
+
+              <div class="proj__thumbs" role="tablist">
+                <button class="proj__thumb is-active" role="tab" aria-selected="true" data-full="../imagenes/casa%20Leonard/exteriores/01.png">
+                  <img src="../imagenes/casa%20Leonard/exteriores/01.png" alt=""></button>
+                <button class="proj__thumb" role="tab" data-full="../imagenes/casa%20Leonard/exteriores/03.png">
+                  <img src="../imagenes/casa%20Leonard/exteriores/03.png" alt=""></button>
+                <button class="proj__thumb" role="tab" data-full="../imagenes/casa%20Leonard/exteriores/04.png">
+                  <img src="../imagenes/casa%20Leonard/exteriores/04.png" alt=""></button>
+                <button class="proj__thumb" role="tab" data-full="../imagenes/casa%20Leonard/interiores/01.png">
+                  <img src="../imagenes/casa%20Leonard/interiores/01.png" alt=""></button>
+                <button class="proj__thumb" role="tab" data-full="../imagenes/casa%20Leonard/interiores/02.png">
+                  <img src="../imagenes/casa%20Leonard/interiores/02.png" alt=""></button>
+                <button class="proj__thumb" role="tab" data-full="../imagenes/casa%20Leonard/interiores/05.png">
+                  <img src="../imagenes/casa%20Leonard/interiores/05.png" alt=""></button>
+              </div>
+            </div>
+
+            <aside class="proj__side">
+              <dl class="proj__meta">
+                <div><dt>Ubicación</dt><dd>Chiloé, Chile</dd></div>
+                <div><dt>Tipología</dt><dd>Residencia contemporánea</dd></div>
+                <div><dt>Estado</dt><dd>Residencial</dd></div>
+                <div><dt>Superficie</dt><dd>210 m²</dd></div>
+                <div><dt>Año</dt><dd>2023</dd></div>
+              </dl>
+
+              <div class="proj__text">
+                <p>
+                  Volúmenes claros, líneas contenidas y una relación directa entre interior,
+                  exterior y paisaje.
+                </p>
+                <p>
+                  Prioriza proporción, continuidad material y una atmósfera nítida,
+                  serena y habitable.
+                </p>
+              </div>
+
+              <a class="btn btn--outline" href="https://www.instagram.com/as_estudioarquitecturachiloe" target="_blank" rel="noreferrer">
+                <span>Ver proyecto en Instagram</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11L11 3M11 3H5.5M11 3V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </a>
+            </aside>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== SERVICES ========== -->
+    <section class="services" id="servicios">
+      <div class="shell services__head">
+        <div>
+          <p class="eyebrow"><span class="eyebrow__idx">04</span> Servicios</p>
+          <h2 data-reveal>Cinco formas<br>de proyectar mejor.</h2>
+        </div>
+        <p class="services__support" data-reveal data-reveal-delay="0.1">
+          Una base clara para viviendas, remodelaciones y procesos de diseño con criterio espacial.
+        </p>
+      </div>
+
+      <div class="shell services__grid">
+        <article class="service" data-reveal>
+          <span class="service__num mono">01</span>
+          <h3>Arquitectura residencial</h3>
+          <p>Viviendas pensadas desde el lugar, el programa y la experiencia de habitar.</p>
+          <span class="service__arrow" aria-hidden="true">→</span>
+        </article>
+        <article class="service" data-reveal data-reveal-delay="0.05">
+          <span class="service__num mono">02</span>
+          <h3>Diseño interior</h3>
+          <p>Interiores con continuidad arquitectónica, claridad material y uso cotidiano resuelto.</p>
+          <span class="service__arrow" aria-hidden="true">→</span>
+        </article>
+        <article class="service" data-reveal data-reveal-delay="0.1">
+          <span class="service__num mono">03</span>
+          <h3>Remodelación y ampliación</h3>
+          <p>Intervención sobre estructuras existentes para actualizar y dar nueva coherencia.</p>
+          <span class="service__arrow" aria-hidden="true">→</span>
+        </article>
+        <article class="service" data-reveal data-reveal-delay="0.15">
+          <span class="service__num mono">04</span>
+          <h3>Anteproyecto y visualización</h3>
+          <p>Propuesta inicial y material de presentación para decidir con claridad antes de construir.</p>
+          <span class="service__arrow" aria-hidden="true">→</span>
+        </article>
+        <article class="service service--wide" data-reveal data-reveal-delay="0.2">
+          <span class="service__num mono">05</span>
+          <h3>Acompañamiento de obra</h3>
+          <p>Seguimiento del proyecto para resguardar criterio, detalle constructivo y correcta ejecución en terreno.</p>
+          <span class="service__arrow" aria-hidden="true">→</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== STATEMENT BAND ========== -->
+    <section class="band">
+      <div class="shell band__grid">
+        <div class="band__quote">
+          <p data-reveal>
+            «Hay más obras detrás de esta vista previa.<br>
+            <span class="band__quote-dim">Esta página es el comienzo de la conversación.»</span>
+          </p>
+        </div>
+        <div class="band__stats">
+          <div class="band__stat" data-counter data-from="0" data-to="12">
+            <span class="band__stat-num mono" data-counter-out>0</span>
+            <span class="band__stat-label">años de práctica</span>
+          </div>
+          <div class="band__stat" data-counter data-from="0" data-to="34">
+            <span class="band__stat-num mono" data-counter-out>0</span>
+            <span class="band__stat-label">proyectos desarrollados</span>
+          </div>
+          <div class="band__stat" data-counter data-from="0" data-to="2">
+            <span class="band__stat-num mono" data-counter-out>0</span>
+            <span class="band__stat-label">en obra · 2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="contact" id="contacto">
+      <div class="shell contact__grid">
+        <div class="contact__head">
+          <p class="eyebrow"><span class="eyebrow__idx">05</span> Contacto</p>
+          <h2 data-reveal>Conversemos el<br>próximo proyecto.</h2>
+        </div>
+
+        <div class="contact__body">
+          <p class="contact__lead" data-reveal data-reveal-delay="0.1">
+            Esta vista previa concentra una parte del trabajo. Para una presentación más amplia,
+            el siguiente paso es escribir por Instagram o agendar una conversación directa.
+          </p>
+
+          <dl class="contact__list">
+            <div><dt>Estudio</dt><dd>AS · estudio arquitectura Chiloé</dd></div>
+            <div><dt>Base</dt><dd>Chiloé, Chile</dd></div>
+            <div><dt>Canal</dt><dd>Instagram directo</dd></div>
+            <div><dt>Cuenta</dt><dd>@as_estudioarquitecturachiloe</dd></div>
+          </dl>
+
+          <div class="contact__actions">
+            <a class="btn btn--primary" href="https://www.instagram.com/as_estudioarquitecturachiloe" target="_blank" rel="noreferrer">
+              <span>Solicitar propuesta</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11L11 3M11 3H5.5M11 3V8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </a>
+            <a class="btn btn--ghost-dark" href="https://www.instagram.com/as_estudioarquitecturachiloe" target="_blank" rel="noreferrer">
+              <span>Ver más obras</span>
+            </a>
+          </div>
+
+          <p class="contact__fine mono">
+            Información referencial · Actualizable a datos definitivos del cliente.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="shell site-footer__grid">
+      <div class="site-footer__cols">
+        <div class="site-footer__col">
+          <p class="site-footer__label mono">Estudio</p>
+          <a href="#obras">Obras</a>
+          <a href="#filosofia">Filosofía</a>
+          <a href="#servicios">Servicios</a>
+        </div>
+        <div class="site-footer__col">
+          <p class="site-footer__label mono">Contacto</p>
+          <a href="https://www.instagram.com/as_estudioarquitecturachiloe" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="#contacto">Agendar</a>
+          <a href="#contacto">Solicitar propuesta</a>
+        </div>
+        <div class="site-footer__col">
+          <p class="site-footer__label mono">Región</p>
+          <span>Chiloé · Chile</span>
+          <span>43°S · 74°W</span>
+          <span class="mono site-footer__year">MMXXVI</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wordmark" aria-hidden="true">
+      <svg viewBox="0 0 1600 780" preserveAspectRatio="xMidYMid meet">
+        <text x="50%" y="80%" text-anchor="middle" class="wordmark__text">AS · CHILOÉ</text>
+      </svg>
+    </div>
+
+    <div class="shell site-footer__bottom">
+      <span class="mono">indexv10 · Preview de portafolio</span>
+      <span class="mono">© AS estudio · 2026</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="indexv11.js"></script>
+</body>
+</html>

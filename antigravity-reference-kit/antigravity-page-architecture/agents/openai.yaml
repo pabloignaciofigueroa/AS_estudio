@@ -1,0 +1,4 @@
+interface:
+  display_name: "Antigravity Page Architecture"
+  short_description: "Reusable architecture patterns from the Antigravity site."
+  default_prompt: "Use $antigravity-page-architecture to plan a premium product website inspired by the structural principles analyzed from Antigravity."
